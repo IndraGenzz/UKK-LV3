@@ -20,16 +20,15 @@
 
     <table>
         <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>NIK</th>
-            <th>NISN</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
+            <th>Id_Alumni</th>
+            <th>nama lengkap</th>
+            <th>Tahun lulus</th>
+            <th>jurusan</th>
+            <th>Pekerjaan saat ini</th>
+            <th>Nomor telepon</th>
+            <th>email</th>
             <th>Alamat</th>
-            <th>Tahun Lulus</th>
-            <th>Jurusan</th>
-            <th>Perubahan</th>
+            <th>ubah</th>
         </tr>
 
         <?php
@@ -49,16 +48,15 @@
         // TAMPILKAN DATA
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
-                <td>{$row['id']}</td>
-                <td>{$row['nama']}</td>
-                <td>{$row['nik']}</td>
-                <td>{$row['nisn']}</td>
-                <td>{$row['tempat_lahir']}</td>
-                <td>{$row['tanggal_lahir']}</td>
-                <td>{$row['alamat']}</td>
-                <td>{$row['tahun_lulus']}</td>
-                <td>{$row['jurusan']}</td>
-                <td>
+              <td>{$row['Id_Alumni']}</td>
+            <td>{$row['Nama_Lengkap']}</td>
+             <td>{$row['Tahun_Lulus']}</td>
+            <td>{$row['Jurusan']}</td>
+             <td>{$row['Pekerjaan_Saat_Ini']}</td>
+             <td>{$row['Nomor_Telepon']}</td>
+             <td>{$row['Email']}</td>
+             <td>{$row['Alamat']}</td>
+            <td>
                     <a href='edit.php?id={$row['id']}'>Edit</a> |
                     <a href='hapus.php?id={$row['id']}' onclick=\"return confirm('konfirmasi hapus?')\">Hapus</a>
                 </td>
@@ -67,5 +65,6 @@
         ?>
     </table>
 </body>
+
 
 </html>
